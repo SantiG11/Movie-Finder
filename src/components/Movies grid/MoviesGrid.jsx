@@ -24,41 +24,53 @@ export function MoviesGrid() {
             const json = await response.json()
             const movies = json.results
 
-            return movies
+            setMovies(movies)
         } catch (e) {
             throw new Error('Movies not finded')
         }
     }
 
-    const handleMovies = async () => {
-        try {
-            const result = await getMovies()
-            setMovies(result)
-        } catch (error) {
-            throw new Error('No movies finded')
+    const handlePrevious = () => {
+        if (page > 1) {
+            setPage(page - 1)
+        } else {
+            return
+        }
+    }
+
+    const handleNext = () => {
+        if (page) {
+            setPage(page + 1)
         }
     }
 
     useEffect(() => {
-        handleMovies()
-    }, [])
+        getMovies()
+    }, [page])
 
     return (
-        <div className="movies-grid">
-            {movies?.map((movie) => {
-                return (
-                    <div className="movie">
-                        <img
-                            className="movie-poster"
-                            src={`https://image.tmdb.org/t/p/original${movie.poster_path}`}
-                            alt=""
-                        />
-                        <p>{movie.original_title}</p>
-                        <p>{movie.release_date}</p>
-                        <p>{movie.popularity}</p>
-                    </div>
-                )
-            })}
-        </div>
+        <>
+            <div className="movies-grid">
+                {movies?.map((movie) => {
+                    return (
+                        <div className="movie" key={movie.id}>
+                            <img
+                                className="movie-poster"
+                                src={`https://image.tmdb.org/t/p/original${movie.poster_path}`}
+                                alt=""
+                            />
+                            <p>{movie.original_title}</p>
+                            <p>{movie.release_date}</p>
+                            <p>{movie.popularity}</p>
+                        </div>
+                    )
+                })}
+            </div>
+            <div className="pages-bar">
+                <button onClick={handlePrevious}>Previous page</button>
+                <p>{page && page}</p>
+                <button onClick={handleNext}>Next page</button>
+            </div>
+        </>
     )
 }

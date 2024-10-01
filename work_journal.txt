@@ -10,3 +10,5 @@ Now I'm working with the Button components logic. They should display a dropdown
 30/09/24 I been working on the dropdown components style and structure.
 
 01/10/24 Commited previous changes to the developing branch.
+Today I worked on getting the movies from the API with fetch. The way I found to make it work was putting the fetch function in the MoviesGrid component body. And added a state and a section to change the pages.
+The next steps are going to fetch the movies through the search bar, and make the filtering and the sorting buttons work. 
