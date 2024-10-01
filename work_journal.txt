@@ -8,3 +8,5 @@ The SortBar component returns a div with an h3 that will explain the criteria to
 Now I'm working with the Button components logic. They should display a dropdown when clicked with a ul list showing buttons to select any item. For this purpose I need to have clear how to do this. 
 
 30/09/24 I been working on the dropdown components style and structure.
+
+01/10/24 Commited previous changes to the developing branch.

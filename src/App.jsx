@@ -3,6 +3,7 @@ import './App.css'
 import { Header } from './components/Header/Header'
 import { Hero } from './components/Hero/Hero'
 import { SortBar } from './components/Sort bar/Sort-bar'
+import { MoviesGrid } from './components/Movies grid/MoviesGrid'
 
 function App() {
     return (
@@ -11,6 +12,7 @@ function App() {
             <main>
                 <Hero />
                 <SortBar />
+                <MoviesGrid />
             </main>
         </>
     )

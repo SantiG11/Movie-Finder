@@ -35,9 +35,14 @@ header {
     overflow: hidden;
 }
 
-.search-icon {
+.search-submit {
     background-color: #fb9802;
-    height: 2.8rem;
+    height: 2rem;
+    width: auto;
+}
+
+.search-icon {
+    height: 2rem;
 }
 
 #search-bar {
@@ -91,4 +96,30 @@ li {
     padding: 10px 15px;
     width: 5rem;
     cursor: pointer;
+}
+
+/* ------- Movies Grid --------- */
+
+.movies-grid {
+    margin-top: 1em;
+    font-size: 20px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+}
+
+.movie {
+    border: 1px solid #fb9802;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5em;
+    align-items: center;
+    justify-content: center;
+    padding: 5px;
+}
+
+.movie-poster {
+    height: 200px;
 }
