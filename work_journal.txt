@@ -1,0 +1,10 @@
+29/09/24_ I started with the developing branch of the project. First, based on the figma model I designed, I created a flow diagram in excalidraw to have a vision on the structure of the projec.
+Then, I started the project structure  in the App.jsx file where I added the Header, the Hero and the SortBar components. 
+
+The Header component returns a header element with an H1 with the name of the page.
+The Hero component returns a div with the SearchBar component.
+The SortBar component returns a div with an h3 that will explain the criteria to display the movies, wich initially will be trending movies. And two Button components, one to filter by genre, and another to sort them by different criterias.
+
+Now I'm working with the Button components logic. They should display a dropdown when clicked with a ul list showing buttons to select any item. For this purpose I need to have clear how to do this. 
+
+30/09/24 I been working on the dropdown components style and structure.
