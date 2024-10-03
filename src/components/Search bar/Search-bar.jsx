@@ -1,21 +1,27 @@
 import { useEffect, useState } from 'react'
 
-export function SearchBar() {
+export function SearchBar({ change, activateSearch }) {
     const [search, setSearch] = useState('')
 
     const handleSubmit = (event) => {
         event.preventDefault()
-        alert(search)
+        activateSearch(true)
+        change(search)
     }
 
     const handleChange = (event) => {
         let newSearch = event.target.value
+        if (newSearch === '') {
+            activateSearch(false)
+            setSearch(newSearch)
+            return
+        }
         setSearch(newSearch)
     }
 
-    useEffect(() => {
-        console.log(search)
-    }, [search])
+    // useEffect(() => {
+    //     console.log(search)
+    // }, [search])
 
     return (
         <>
