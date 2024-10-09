@@ -1,15 +1,12 @@
-export function DropdownItem(props) {
+export function DropdownItem({ items, id, selectMethod }) {
     return (
-        <div className="dropdown">
-            <ul>
-                {props.items && props.items.length > 0 ? (
-                    props.items.map((genre) => {
-                        return <li>{genre}</li>
-                    })
-                ) : (
-                    <li>Empty</li>
-                )}
-            </ul>
-        </div>
+        <select name={id} id={id} onChange={selectMethod}>
+            <option value="default">Default</option>
+            {items?.map((item) => (
+                <option key={item.id} id={item.id} value={item.id}>
+                    {item.name}
+                </option>
+            ))}
+        </select>
     )
 }

@@ -7,22 +7,25 @@ import { MoviesGrid } from './components/Movies grid/MoviesGrid'
 import { SearchResults } from './components/SearchResults/SearchResults'
 
 function App() {
-    const [testState, setTestState] = useState('')
+    const [searchInput, setSearchInput] = useState('')
     const [searching, setSearching] = useState(false)
 
-    const changeState = (newState) => {
-        setTestState(newState)
+    const updateSearchInput = (newInput) => {
+        setSearchInput(newInput)
     }
 
-    useEffect(() => {}, [testState])
+    // useEffect(() => {}, [searchInput])
     return (
         <>
             <Header />
             <main>
-                <Hero change={changeState} activateSearch={setSearching} />
+                <Hero
+                    change={updateSearchInput}
+                    activateSearch={setSearching}
+                />
                 <SortBar />
                 {searching ? (
-                    <SearchResults result={testState} />
+                    <SearchResults result={searchInput} />
                 ) : (
                     <MoviesGrid />
                 )}

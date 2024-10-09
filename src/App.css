@@ -80,24 +80,6 @@ button {
     font-size: 1rem;
 }
 
-.sort-bar-selection .dropdown {
-    position: absolute;
-    color: #000;
-}
-
-ul {
-    background-color: #b69f27;
-    font-size: 1rem;
-}
-
-li {
-    list-style-type: none;
-    text-align: center;
-    padding: 10px 15px;
-    width: 5rem;
-    cursor: pointer;
-}
-
 /* ------- Movies Grid --------- */
 
 .movies-grid {

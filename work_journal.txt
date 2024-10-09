@@ -15,3 +15,10 @@ The next steps are going to fetch the movies through the search bar, and make th
 
 
 03/10/24 Today I worked with the search bar component, and now it fetches the movies taking the value of the search bar and a grid with the results is rendered when I submit the search replacing the MoviesGrid component. 
+
+05/10/24 I worked with the dropdown component and it's functionality. First, I worked in the structure, making it return two components: a label, and a selection. The label is displaying the text content of the dropdown and the selection the options to select.
+After that, I started figuring out how to filter the results by genre. First I fetch the genres list wich returns an array of objects with the name and the id of each genre. Then I worked in a function to find the id with the name of the genre, and the next step is going to be pass the genre from the selection of the dropdown componenet to the find function, and from the id obtained I got to figure it out how to fetch the movies again with the genre filter.
+
+07/10 I'm starting to know how useContext work and testing it, until i'm able to set differents global states for genre, genres, and page (there could be more), to read them and change them along the whole page.
+
+09/10 Today I started using the useContext hook, creating the MoviesContext to store the states of pages and genres to update them with each part where I needed
