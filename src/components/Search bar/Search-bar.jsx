@@ -1,18 +1,21 @@
-import { useEffect, useState } from 'react'
+import { useContext, useEffect, useState } from 'react'
+import { MoviesContext } from '../../context/MoviesContext'
 
-export function SearchBar({ change, activateSearch }) {
+export function SearchBar() {
     const [search, setSearch] = useState('')
+    const { searchInput, setSearchInput, setSearching } =
+        useContext(MoviesContext)
 
     const handleSubmit = (event) => {
         event.preventDefault()
-        activateSearch(true)
-        change(search)
+        setSearching(true)
+        setSearchInput(search)
     }
 
     const handleChange = (event) => {
         let newSearch = event.target.value
         if (newSearch === '') {
-            activateSearch(false)
+            setSearching(false)
             setSearch(newSearch)
             return
         }

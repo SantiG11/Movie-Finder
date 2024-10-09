@@ -1,34 +1,24 @@
-import { useEffect, useState } from 'react'
+import { useContext, useEffect, useState } from 'react'
 import './App.css'
 import { Header } from './components/Header/Header'
 import { Hero } from './components/Hero/Hero'
 import { SortBar } from './components/Sort bar/Sort-bar'
 import { MoviesGrid } from './components/Movies grid/MoviesGrid'
 import { SearchResults } from './components/SearchResults/SearchResults'
+import { MoviesContext } from './context/MoviesContext'
+import { PagesBar } from './components/PagesBar/PagesBar'
 
 function App() {
-    const [searchInput, setSearchInput] = useState('')
-    const [searching, setSearching] = useState(false)
+    const { searching } = useContext(MoviesContext)
 
-    const updateSearchInput = (newInput) => {
-        setSearchInput(newInput)
-    }
-
-    // useEffect(() => {}, [searchInput])
     return (
         <>
             <Header />
             <main>
-                <Hero
-                    change={updateSearchInput}
-                    activateSearch={setSearching}
-                />
-                <SortBar />
-                {searching ? (
-                    <SearchResults result={searchInput} />
-                ) : (
-                    <MoviesGrid />
-                )}
+                <Hero />
+                {searching === false && <SortBar />}
+                {searching ? <SearchResults /> : <MoviesGrid />}
+                <PagesBar />
             </main>
         </>
     )

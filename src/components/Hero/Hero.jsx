@@ -1,10 +1,10 @@
 import { SearchBar } from '../Search bar/Search-bar'
 
-export function Hero({ change, activateSearch }) {
+export function Hero() {
     return (
         <>
             <section className="hero">
-                <SearchBar change={change} activateSearch={activateSearch} />
+                <SearchBar />
             </section>
         </>
     )

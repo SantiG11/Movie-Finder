@@ -4,21 +4,10 @@ import { MoviesContext, MoviesProvider } from '../../context/MoviesContext'
 
 export function MoviesGrid() {
     const [movies, setMovies] = useState([])
-    const { page, setPage, genreId } = useContext(MoviesContext)
+    const { page, genreId } = useContext(MoviesContext)
 
     const refreshMovies = () => {
         fetchMovies(page, genreId).then((movies) => setMovies(movies))
-    }
-
-    const handlePrevious = () => {
-        if (page <= 1) {
-            return
-        }
-        setPage(page - 1)
-    }
-
-    const handleNext = () => {
-        setPage(page + 1)
     }
 
     useEffect(() => {
@@ -42,11 +31,6 @@ export function MoviesGrid() {
                         </div>
                     )
                 })}
-            </div>
-            <div className="pages-bar">
-                <button onClick={handlePrevious}>Previous page</button>
-                <p>{page && page}</p>
-                <button onClick={handleNext}>Next page</button>
             </div>
         </>
     )
