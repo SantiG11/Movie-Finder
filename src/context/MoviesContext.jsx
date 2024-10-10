@@ -5,7 +5,11 @@ export const MoviesContext = createContext()
 export function MoviesProvider({ children }) {
     const [page, setPage] = useState(1)
     const [pageLength, setPageLength] = useState()
+
     const [genreId, setGenreId] = useState()
+
+    const [sortValue, setSortValue] = useState()
+
     const [searching, setSearching] = useState(false)
     const [searchInput, setSearchInput] = useState('')
 
@@ -26,6 +30,8 @@ export function MoviesProvider({ children }) {
                 setSearching,
                 searchInput,
                 setSearchInput,
+                sortValue,
+                setSortValue,
             }}
         >
             {children}

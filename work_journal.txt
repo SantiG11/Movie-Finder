@@ -20,9 +20,9 @@ The next steps are going to fetch the movies through the search bar, and make th
 
 After that, I started figuring out how to filter the results by genre. First I fetch the genres list wich returns an array of objects with the name and the id of each genre. Then I worked in a function to find the id with the name of the genre, and the next step is going to be pass the genre from the selection of the dropdown componenet to the find function, and from the id obtained I got to figure it out how to fetch the movies again with the genre filter.
 
-07/10 I'm starting to know how useContext work and testing it, until i'm able to set differents global states for genre, genres, and page (there could be more), to read them and change them along the whole page.
+07/10/24 I'm starting to know how useContext work and testing it, until i'm able to set differents global states for genre, genres, and page (there could be more), to read them and change them along the whole page.
 
-09/10 Today I started using the useContext hook, creating the MoviesContext to store the states of pages and genres to update them with each part where needed.
+09/10/24 Today I started using the useContext hook, creating the MoviesContext to store the states of pages and genres to update them with each part where needed.
 
 Now the MoviesContext has the states of page, pageLength, genreId, searching and searchInput with a set method for each. And at this point none of the components are receiving props.
 
@@ -33,3 +33,5 @@ The sort bar it's now rendered when searching is false, this is because the api 
 Now the droprown to filter by genre is working.
 
 I'm getting an alert message when I render the SearchResults component saying this: "Cannot update a component (`MoviesProvider`) while rendering a different component (`SearchResults`). To locate the bad setState() call inside `SearchResults`" 
+
+10/10/24 Now the sort droprown is added and working, theres a list with name and id for each item, and the FetchMovies function now detects if there is a sort item selected or not, if not the movies are sorted by popularity

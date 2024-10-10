@@ -1,15 +1,14 @@
 import { useContext, useEffect, useState } from 'react'
 import { Dropdown } from '../Dropdown/Dropdown'
 import './Sort-bar-style.css'
-import { useGenres } from '../../hooks/useGenres'
 import { getGenresList } from '../../services/getGenresList'
 import { MoviesContext } from '../../context/MoviesContext'
-
-const sorts = ['Popularity', 'Name (A-Z)', 'Year']
+import { sortList } from '../../services/sortList'
 
 export function SortBar() {
     const [genres, setGenres] = useState([])
-    const { setGenreId } = useContext(MoviesContext)
+    const [sortingList, setSortingList] = useState([])
+    const { setGenreId, setSortValue } = useContext(MoviesContext)
 
     const fetchGenres = async () => {
         try {
@@ -26,6 +25,14 @@ export function SortBar() {
         setGenreId(genre)
     }
 
+    const handleSort = (sortValue) => {
+        setSortValue(sortValue)
+    }
+
+    useEffect(() => {
+        setSortingList(sortList)
+    }, [])
+
     return (
         <>
             <div className="sort-bar">
@@ -35,7 +42,11 @@ export function SortBar() {
                     items={genres}
                     onSelection={handleGenre}
                 />
-                {/* <Dropdown textContent="Sort by" items={sorts} /> */}
+                <Dropdown
+                    textContent="Sort by"
+                    items={sortingList}
+                    onSelection={handleSort}
+                />
             </div>
         </>
     )
