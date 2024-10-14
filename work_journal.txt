@@ -35,3 +35,6 @@ Now the droprown to filter by genre is working.
 I'm getting an alert message when I render the SearchResults component saying this: "Cannot update a component (`MoviesProvider`) while rendering a different component (`SearchResults`). To locate the bad setState() call inside `SearchResults`" 
 
 10/10/24 Now the sort droprown is added and working, theres a list with name and id for each item, and the FetchMovies function now detects if there is a sort item selected or not, if not the movies are sorted by popularity
+
+13/10/24 I created the MovieCard component to get the information of each movie and display it. I also splited the css styles in a way that each component has it's own stylesheet.
+

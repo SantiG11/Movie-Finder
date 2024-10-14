@@ -1,0 +1,21 @@
+.pages-bar {
+    display: flex;
+    width: 500px;
+    justify-content: space-between;
+    align-items: center;
+    margin: auto;
+}
+
+.pages-bar button {
+    padding: 2px;
+    width: 120px;
+    font-size: 1rem;
+    cursor: pointer;
+    border-radius: 5px;
+    border: none;
+    padding: 10px 15px;
+}
+
+button {
+    border: none;
+}

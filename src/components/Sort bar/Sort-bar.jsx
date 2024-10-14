@@ -19,8 +19,6 @@ export function SortBar() {
         }
     }
 
-    fetchGenres()
-
     const handleGenre = (genre) => {
         setGenreId(genre)
     }
@@ -30,6 +28,7 @@ export function SortBar() {
     }
 
     useEffect(() => {
+        fetchGenres()
         setSortingList(sortList)
     }, [])
 

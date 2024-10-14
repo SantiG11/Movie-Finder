@@ -17,6 +17,11 @@ export function MoviesProvider({ children }) {
         setPage(1)
     }, [searching, genreId])
 
+    useEffect(() => {
+        setGenreId('default')
+        setSortValue('default')
+    }, [searching])
+
     return (
         <MoviesContext.Provider
             value={{

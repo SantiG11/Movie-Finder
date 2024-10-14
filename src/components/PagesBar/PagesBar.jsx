@@ -1,5 +1,6 @@
 import { useContext } from 'react'
 import { MoviesContext } from '../../context/MoviesContext'
+import './PagesBarStyle.css'
 
 export function PagesBar() {
     const { page, setPage, pageLength } = useContext(MoviesContext)

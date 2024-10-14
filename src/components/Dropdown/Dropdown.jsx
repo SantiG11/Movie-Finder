@@ -1,4 +1,3 @@
-import { useEffect, useState } from 'react'
 import { DropdownItem } from '../Dropdown-item/Dropdown-item'
 import './Dropdown.css'
 import { Label } from '../Label/Label'

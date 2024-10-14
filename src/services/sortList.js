@@ -13,18 +13,18 @@ export const sortList = [
     },
     {
         name: 'Name (A-Z)',
-        id: 'original_title.desc',
-    },
-    {
-        name: 'Name (Z-A)',
         id: 'original_title.asc',
     },
     {
-        name: 'Release Date (Older)',
-        id: 'primary_release_date.desc',
+        name: 'Name (Z-A)',
+        id: 'original_title.desc',
     },
     {
         name: 'Release Date (Newer)',
+        id: 'primary_release_date.desc',
+    },
+    {
+        name: 'Release Date (Older)',
         id: 'primary_release_date.asc',
     },
 ]

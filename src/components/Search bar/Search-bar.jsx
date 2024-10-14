@@ -1,10 +1,10 @@
-import { useContext, useEffect, useState } from 'react'
+import { useContext, useState } from 'react'
 import { MoviesContext } from '../../context/MoviesContext'
+import './SearchBarStyle.css'
 
 export function SearchBar() {
     const [search, setSearch] = useState('')
-    const { searchInput, setSearchInput, setSearching } =
-        useContext(MoviesContext)
+    const { setSearchInput, setSearching } = useContext(MoviesContext)
 
     const handleSubmit = (event) => {
         event.preventDefault()
@@ -21,10 +21,6 @@ export function SearchBar() {
         }
         setSearch(newSearch)
     }
-
-    // useEffect(() => {
-    //     console.log(search)
-    // }, [search])
 
     return (
         <>
