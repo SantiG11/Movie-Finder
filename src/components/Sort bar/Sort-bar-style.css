@@ -1,16 +1,10 @@
 .sort-bar {
-    margin-top: 10px;
+    box-sizing: border-box;
+    width: 100%;
     display: flex;
-    justify-content: end;
+    flex-wrap: wrap;
+    justify-content: center;
     align-items: center;
-    gap: 0.5em;
-    padding: 0 10px;
-}
-
-.sort-bar h3 {
-    margin-right: auto;
-}
-
-.sort-bar-selection {
-    display: inline-block;
+    gap: 1em;
+    padding: 0 5px;
 }

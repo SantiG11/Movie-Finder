@@ -1,0 +1,42 @@
+.movie {
+    box-sizing: border-box;
+    padding: 5px;
+    font-size: 1rem;
+    border: 1px solid #fb9802;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5em;
+    align-items: center;
+    justify-content: space-between;
+    align-self: center;
+    justify-self: center;
+}
+
+.movie-poster {
+    width: 100%;
+    aspect-ratio: 1/1.5;
+}
+
+.null-poster {
+    width: 100%;
+    aspect-ratio: 1/1.5;
+    background-color: #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.movie-title {
+    font-size: 1.1rem;
+
+    align-self: center;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-self: start;
+}
+
+p {
+    align-self: start;
+}

@@ -1,6 +1,7 @@
 import { useState, useEffect, useContext } from 'react'
 import { fetchSearch } from '../../services/FetchSearch'
 import { MoviesContext } from '../../context/MoviesContext'
+import { MovieCard } from '../MovieCard/MovieCard'
 
 export function SearchResults() {
     const { searchInput, page, setPageLength } = useContext(MoviesContext)
@@ -22,18 +23,7 @@ export function SearchResults() {
                 {searchedMovies.length ? (
                     (setPageLength(searchedMovies.length),
                     searchedMovies.map((movie) => {
-                        return (
-                            <div className="movie" key={movie.id}>
-                                <img
-                                    className="movie-poster"
-                                    src={`https://image.tmdb.org/t/p/original${movie.poster_path}`}
-                                    alt=""
-                                />
-                                <p>{movie.original_title}</p>
-                                <p>{movie.release_date}</p>
-                                <p>{movie.popularity}</p>
-                            </div>
-                        )
+                        return <MovieCard movie={movie} key={movie.id} />
                     }))
                 ) : (
                     <p>No movies finded</p>

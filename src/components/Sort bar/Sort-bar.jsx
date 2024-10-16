@@ -35,7 +35,6 @@ export function SortBar() {
     return (
         <>
             <div className="sort-bar">
-                <h3>Trending Movies</h3>
                 <Dropdown
                     textContent="Genres"
                     items={genres}

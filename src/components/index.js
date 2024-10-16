@@ -1,6 +1,5 @@
 export * from './Dropdown-item/Dropdown-item'
 export * from './Dropdown/Dropdown'
-export * from './fetching'
 export * from './Header/Header'
 export * from './Hero/Hero'
 export * from './Label/Label'

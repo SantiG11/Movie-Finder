@@ -22,7 +22,7 @@ export function PagesBar() {
     return (
         <div className="pages-bar">
             <button onClick={handlePrevious}>Previous page</button>
-            <p>{page && page}</p>
+            <p className="page-number">{page}</p>
             <button onClick={handleNext}>Next page</button>
         </div>
     )

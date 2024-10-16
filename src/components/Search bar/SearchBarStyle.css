@@ -1,26 +1,26 @@
 .search-bar-container {
     display: flex;
-    border-radius: 15px;
+    border-radius: 1.3em;
     overflow: hidden;
 }
 
 .search-submit {
     background-color: #fb9802;
-    height: 2rem;
-    width: auto;
     border: none;
-    padding: 10px 15px;
+    padding: 0.3em;
 }
 
 .search-icon {
-    height: 2rem;
-    width: 3rem;
     border: none;
+    min-width: 30px;
+    width: 2vw;
 }
 
 #search-bar {
+    padding-left: 5px;
     outline: none;
     border: none;
-    width: 40rem;
-    font-size: 1.3rem;
+    width: 60vw;
+    max-width: 600px;
+    font-size: 1rem;
 }
