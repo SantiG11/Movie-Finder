@@ -5,7 +5,7 @@ export const fetchSearch = async (result, page) => {
         method: 'GET',
         headers: {
             accept: 'application/json',
-            Authorization: API_TOKEN,
+            Authorization: `Bearer ${API_TOKEN}`,
         },
     }
 

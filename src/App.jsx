@@ -1,6 +1,7 @@
 import { useContext } from 'react'
 import './App.css'
 import {
+    Footer,
     Header,
     Hero,
     MoviesGrid,
@@ -23,6 +24,7 @@ function App() {
                 {searching ? <SearchResults /> : <MoviesGrid />}
                 <PagesBar />
             </main>
+            <Footer />
         </>
     )
 }

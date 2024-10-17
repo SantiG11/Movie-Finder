@@ -1,12 +1,11 @@
-const GENRES_TOKEN =
-    'Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiJiNTllMTRmMDY2ODMwNTM4YWY3ZTlhYzEyMDBlZjQxZSIsIm5iZiI6MTcyODEzNTcyMy4zMDc2MTMsInN1YiI6IjY2ZjQ3MjQzNTgyMGQyOGNmYjZhMTIxMiIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.nVbEomCJ73r7nyKEL7HLCrg6S3twtnFYMQJX13UNKSc'
+const GENRES_TOKEN = import.meta.env.VITE_APP_GENRES_TOKEN
 
 export const getGenresList = async () => {
     const options = {
         method: 'GET',
         headers: {
             accept: 'application/json',
-            Authorization: GENRES_TOKEN,
+            Authorization: `Bearer ${GENRES_TOKEN}`,
         },
     }
 

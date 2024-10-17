@@ -1,0 +1,19 @@
+footer {
+    height: 6vh;
+    background-color: #000;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    margin-top: 2rem;
+    gap: 5px;
+}
+
+.popcorn-icon {
+    height: 1.2rem;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+    font-size: small;
+}

@@ -2,7 +2,7 @@ import { DropdownItem } from '../Dropdown-item/Dropdown-item'
 import './Dropdown.css'
 import { Label } from '../Label/Label'
 
-export function Dropdown({ textContent, items, onSelection }) {
+export function Dropdown({ textContent, defaultText, items, onSelection }) {
     const handleSelection = (e) => {
         onSelection(e.target.value)
     }
@@ -14,6 +14,7 @@ export function Dropdown({ textContent, items, onSelection }) {
             <Label htmlFor={sanitizedId} textContent={textContent} />
             <DropdownItem
                 items={items}
+                defaultText={defaultText}
                 id={sanitizedId}
                 selectMethod={handleSelection}
             />

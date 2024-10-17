@@ -41,3 +41,11 @@ I'm getting an alert message when I render the SearchResults component saying th
 14/10/24 Added the MovieCard component to the SearchResults component. Updated the information displayed in the movie card component and started working on it's style.
 
 14/10/24 Today I worked in the design, to make it responsive and to make all movie cards the same size
+
+
+16/10/24 Finished to make the page responsive. Now the basic design is complete.
+
+17/10/24 When a button from pages bar is clicked it sends the user to the top of the page. 
+I hid the API tokens in the .env file
+Added a defaultText prop to the Dropdown component, and conditionally renders it if it exist
+Added a favicon and a footer component.

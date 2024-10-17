@@ -37,6 +37,7 @@ export function SortBar() {
             <div className="sort-bar">
                 <Dropdown
                     textContent="Genres"
+                    defaultText="All"
                     items={genres}
                     onSelection={handleGenre}
                 />

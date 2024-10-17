@@ -10,6 +10,10 @@ export function PagesBar() {
             return
         }
         setPage(page - 1)
+
+        window.scrollTo({
+            top: 0,
+        })
     }
 
     const handleNext = () => {
@@ -17,6 +21,10 @@ export function PagesBar() {
             return
         }
         setPage(page + 1)
+
+        window.scrollTo({
+            top: 0,
+        })
     }
 
     return (
