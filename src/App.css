@@ -9,6 +9,10 @@ body {
     color: #fb9802;
     font-size: 1rem;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    height: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
 }
 
 main {
@@ -25,4 +29,9 @@ main {
     justify-content: center;
     align-items: center;
     width: 90%;
+    min-height: 70vh;
+}
+
+h2 {
+    justify-self: center;
 }
