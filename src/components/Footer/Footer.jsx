@@ -1,5 +1,4 @@
 import './FooterStyle.css'
-import popcornIcon from '/public/popcorn.png'
 
 export function Footer() {
     return (
