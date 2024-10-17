@@ -1,10 +1,11 @@
 import './FooterStyle.css'
+import popcornIcon from '/public/popcorn.png'
 
 export function Footer() {
     return (
         <footer>
             <img
-                src="../public/popcorn.png"
+                src={popcornIcon}
                 alt="Popcorn icon"
                 className="popcorn-icon"
             />
