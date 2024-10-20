@@ -32,7 +32,7 @@ export function SearchBar() {
                 >
                     <img
                         className="search-icon"
-                        src="dist/assets/search_24dp_666666_FILL0_wght400_GRAD0_opsz24.svg"
+                        src="search_24dp_666666_FILL0_wght400_GRAD0_opsz24.svg"
                         alt="Search icon"
                     />
                 </button>
