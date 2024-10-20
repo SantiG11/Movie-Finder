@@ -18,7 +18,9 @@ export function MovieCard({ movie }) {
                 <p>{movie.original_title}</p>
             </div>
             <p>Release Year: {new Date(movie.release_date).getFullYear()}</p>
-            <p>Rating: {movie.vote_average.toFixed(2)}</p>
+            <p>
+                Rating: {movie.vote_average ? movie.vote_average.toFixed(2) : 0}
+            </p>
         </div>
     )
 }
