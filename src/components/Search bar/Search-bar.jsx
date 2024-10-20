@@ -25,10 +25,14 @@ export function SearchBar() {
     return (
         <>
             <form className="search-bar-container" onSubmit={handleSubmit}>
-                <button type="submit" className="search-submit">
+                <button
+                    type="submit"
+                    className="search-submit"
+                    disabled={search === '' ? true : false}
+                >
                     <img
                         className="search-icon"
-                        src="dist\assets\search_24dp_666666_FILL0_wght400_GRAD0_opsz24.svg"
+                        src="dist/assets/search_24dp_666666_FILL0_wght400_GRAD0_opsz24.svg"
                         alt="Search icon"
                     />
                 </button>

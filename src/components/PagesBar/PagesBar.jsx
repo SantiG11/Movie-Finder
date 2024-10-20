@@ -17,7 +17,7 @@ export function PagesBar() {
     }
 
     const handleNext = () => {
-        if (pageLength < 20 || !pageLength) {
+        if (pageLength < 20) {
             return
         }
         setPage(page + 1)
