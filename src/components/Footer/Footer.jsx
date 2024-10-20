@@ -4,7 +4,7 @@ export function Footer() {
     return (
         <footer>
             <img
-                src="public\popcorn.png"
+                src="dist\assets\popcorn-DQmlKYJW.png"
                 alt="Popcorn icon"
                 className="popcorn-icon"
             />
