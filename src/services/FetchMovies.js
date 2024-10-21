@@ -16,7 +16,7 @@ export const fetchMovies = async (page, genreId, sortValue) => {
         const json = await response.json()
 
         const movies = json.results
-
+        console.log('movies updated')
         return movies
     } catch (e) {
         throw new Error('Movies not finded')
