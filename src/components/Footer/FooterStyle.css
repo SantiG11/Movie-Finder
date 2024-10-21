@@ -6,6 +6,8 @@ footer {
     justify-content: start;
     margin-top: 2rem;
     gap: 5px;
+    align-self: end;
+    justify-self: end;
 }
 
 .popcorn-icon {

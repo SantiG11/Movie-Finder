@@ -26,7 +26,7 @@ export function SearchResults() {
                         return <MovieCard movie={movie} key={movie.id} />
                     }))
                 ) : (
-                    <p>No movies finded</p>
+                    <h2>No movies finded</h2>
                 )}
             </div>
         </>
